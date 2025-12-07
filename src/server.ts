@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 
-import { ProductRoutes } from './modules/products/product.routes';
+import { ProductRoutes } from './modules/product/product.router';
 
 const app = express();
 
