@@ -6,7 +6,8 @@ export default class ProductService{
     private DAO = new ProductDAO();
 
     async get(){
-        await this.DAO.get()
+        const products = await this.DAO.get();
+        return products;
     };
 
     async getById(id: string){

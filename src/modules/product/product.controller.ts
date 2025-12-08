@@ -7,7 +7,9 @@ export default class ProductController{
     private Service = new ProductService();
 
     async get(){
-        return await this.Service.get()
+        const products = await this.Service.get();
+        return products;
+        
     };
 
     async getById(req: Request<{},{},{id:string}>){

@@ -7,7 +7,10 @@ import ProductController from "./product.controller";
 const router = Router();
 const controller = new ProductController()
 
-router.get('/', async (req: Request, res: Response)=>{ await controller.get(); });
+router.get('/', async (req: Request, res: Response)=>{ 
+    const products = await controller.get();
+    res.send(`Products: ${JSON.stringify(products)}`);
+ });
 
 router.get('/:id', async (req: Request<{id: string}>, res: Response)=>{ await controller.getById(req) });
 

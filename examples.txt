@@ -1,0 +1,11 @@
+{
+    "_id": "6936badb848626e1fadabfad",
+    "name": "Producto 1",
+    "description": "Descripcion de producto",
+    "price": 30,
+    "cost": 25,
+    "warehouseId": "123asda",
+    "categoryId": "123asdaa",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_1AETMjntAih0MeBre3Sd2NzIsmmdYBHAg&s",
+    "variants": ["negro", "rojo", "azul"]
+}

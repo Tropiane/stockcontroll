@@ -5,7 +5,8 @@ export class ProductDAO{
     DB = Product;
 
     async get(){
-        return await this.DB.find({}).lean()
+        const products = await this.DB.find({}).lean()
+        return products
     };
 
     async getById(id: string){
