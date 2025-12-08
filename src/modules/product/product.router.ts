@@ -15,7 +15,7 @@ router.post('/create', async (req: Request, res)=>{
     await controller.create(req);
     res.send('Product created');
 });
-router.put('/update', async (req: Request<{},{},{id: string, product:ProductInterface}>, res)=>{
+router.put('/update', async (req: Request<{},{},ProductInterface>, res)=>{
     await controller.update(req);
     res.send('Product updated');
 });
@@ -24,4 +24,4 @@ router.delete('/delete', async (req: Request<{},{}, {id: string}>, res)=>{
     res.send('Product deleted');
 });
 
-export const ProductRoutes = router
+export const ProductRouter = router

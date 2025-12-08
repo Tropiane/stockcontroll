@@ -20,9 +20,11 @@ export default class ProductController{
         await this.Service.create(product);
     };
 
-    async update(req:Request<{},{},{id: string, product:ProductInterface}>){
-        const id = req.body.id;
-        const product = req.body.product;
+    async update(req:Request<{},{},ProductInterface>){
+        const id = req.body._id;
+        const product = req.body;
+
+        if(!id) return;
         await this.Service.update(id, product);
     };
 
