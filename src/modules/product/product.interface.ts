@@ -5,5 +5,6 @@ export interface ProductInterface{
     cost: number,
     warehouseId: string,
     categoryId?: string,
+    imageUrl?: string,
     variants?: []
 }

@@ -1,11 +1,13 @@
-import {model, Schema} from 'mongoose';
-
-const ProductModel = new Schema({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Product = void 0;
+const mongoose_1 = require("mongoose");
+const ProductModel = new mongoose_1.Schema({
     name: {
         type: String,
         require: true
     },
-    description:{
+    description: {
         type: String,
         require: true
     },
@@ -21,9 +23,7 @@ const ProductModel = new Schema({
         type: String,
         require: true
     },
-    imageUrl: String,
     categoryId: String,
     variants: []
-})
-
-export const Product = model("Product", ProductModel, "products");
+});
+exports.Product = (0, mongoose_1.model)("Product", ProductModel, "products");

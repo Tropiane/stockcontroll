@@ -11,9 +11,9 @@ router.get('/', async (req: Request, res: Response)=>{ await controller.get(); }
 
 router.get('/:id', async (req: Request<{id: string}>, res: Response)=>{ await controller.getById(req) });
 
-router.post('/create', async (req: Request<{},{},{product: ProductInterface}>, res)=>{
-await controller.create(req);
-res.send('Product created');
+router.post('/create', async (req: Request, res)=>{     
+    await controller.create(req);
+    res.send('Product created');
 });
 router.put('/update', async (req: Request<{},{},{id: string, product:ProductInterface}>, res)=>{
     await controller.update(req);

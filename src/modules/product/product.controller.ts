@@ -14,10 +14,10 @@ export default class ProductController{
         await this.Service.getById(req.body.id)
     };
 
-    async create(req: Request<{},{},{product:ProductInterface}>){
-        console.log(req.body.product);
+    async create(req: Request<{},{},ProductInterface>): Promise<void> {
         
-        await this.Service.create(req.body.product);
+        const product = req.body;
+        await this.Service.create(product);
     };
 
     async update(req:Request<{},{},{id: string, product:ProductInterface}>){
